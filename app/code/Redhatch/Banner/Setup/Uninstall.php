@@ -15,7 +15,13 @@ class Uninstall implements \Magento\Framework\Setup\UninstallInterface
         $installer = $setup;
         $installer->startSetup();
 
-        // $installer->getConnection()->dropTable($installer->getTable(SOME TABLE TO DROP));
+        if ( ! $installer->tableExists( $installer->getTable('redhatch_banner_item') ) ) {
+            $installer->getConnection()->dropTable($installer->getTable('redhatch_banner_item'));
+        }
+
+        if ( ! $installer->tableExists( $installer->getTable('redhatch_banner') ) ) {
+            $installer->getConnection()->dropTable($installer->getTable('redhatch_banner'));
+        }
 
         $installer->endSetup();
     }
