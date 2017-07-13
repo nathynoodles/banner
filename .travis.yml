@@ -28,10 +28,12 @@ matrix:
   exclude:
     - php: 7.0
       env: TEST_SUITE=static
-before_install: ./dev/travis/before_install.sh
+before_install:
+  - sudo chmod 777 /home /home/travis /home/travis/build
+  - ./dev/travis/before_install.sh
 install: composer install --no-interaction --prefer-dist
 before_script:
-  - sudo chmod 777 /home /home/travis /home/travis/build 
+  - sudo chmod 777 /home /home/travis /home/travis/build
   - ./dev/travis/before_script.sh
 script: 
   - cd dev/tests/$TEST_SUITE
