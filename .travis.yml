@@ -34,7 +34,7 @@ before_install:
   - ./dev/travis/before_install.sh
 install: composer install --no-interaction --prefer-dist
 before_script:
-  - sudo chmod 777 /home /home/travis /home/travis/build
+  - sudo chmod -R 777 /home /home/travis /home/travis/build
   - ./dev/travis/before_script.sh
 script: 
   - cd dev/tests/$TEST_SUITE
