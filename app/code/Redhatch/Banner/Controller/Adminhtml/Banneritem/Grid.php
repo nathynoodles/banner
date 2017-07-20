@@ -7,7 +7,7 @@
  */
 
 namespace Redhatch\Banner\Controller\Adminhtml\Banneritem;
-class Index extends \Magento\Backend\App\Action
+class Grid extends \Magento\Backend\App\Action
 {
     /**
      * Authorization level of a basic admin session
@@ -16,13 +16,14 @@ class Index extends \Magento\Backend\App\Action
      */
     const ADMIN_RESOURCE = 'Redhatch_Banner::banneritem';
 
+    /**
+     * @return void
+     */
     public function execute()
     {
-        exit('banneritem');
         $this->_view->loadLayout();
         $this->_setActiveMenu('Redhatch_banner::banneritem');
-        $this->_addBreadcrumb(__('Banner Manager'), __('Banner Items'));
+        $this->_addBreadcrumb(__('Banner Manager'), __('Banners'));
         $this->_view->renderLayout();
     }
-
 }

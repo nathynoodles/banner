@@ -28,7 +28,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             $table = $installer->getConnection()->newTable(
                 $installer->getTable('redhatch_banner_banner')
             )->addColumn(
-                'redhatch_banner_banner_id',
+                'entity_id',
                 \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                 null,
                 ['identity' => true, 'nullable' => false, 'primary' => true, 'unsigned' => true,],
@@ -100,7 +100,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                 ['nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE,],
                 'Modification Time'
             )->addColumn(
-                'is_active',
+                'status',
                 \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
                 null,
                 ['nullable' => false, 'default' => '1',],
@@ -115,7 +115,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             $table = $installer->getConnection()->newTable(
                 $installer->getTable('redhatch_banner_item')
             )->addColumn(
-                'redhatch_banner_item_id',
+                'entity_id',
                 \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                 null,
                 ['identity' => true, 'nullable' => false, 'primary' => true, 'unsigned' => true,],
@@ -199,7 +199,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                 ['nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE,],
                 'Modification Time'
             )->addColumn(
-                'is_active',
+                'status',
                 \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
                 null,
                 ['nullable' => false, 'default' => '1',],

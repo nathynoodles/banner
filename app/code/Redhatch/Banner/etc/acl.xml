@@ -13,6 +13,7 @@
                     <resource id="Redhatch_Banner::banner_manager" title="Banner Manager" translate="title" sortOrder="10">
                         <resource id="Redhatch_Banner::banner" title="Banner" translate="title" sortOrder="10" />
                         <resource id="Redhatch_Banner::banneritem" title="Banner Item" translate="title" sortOrder="20" />
+                        <resource id="Redhatch_Banner::banneritems" title="Banner Items" translate="title" sortOrder="20" />
                     </resource>
                 </resource>
             </resource>
