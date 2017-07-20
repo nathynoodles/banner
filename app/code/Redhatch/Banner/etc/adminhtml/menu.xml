@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Redhatch_Banner::banner_manager" title="Banner Manager" translate="title" module="Redhatch_Banner" parent="Magento_Backend::marketing" sortOrder="50" resource="Redhatch_Banner::banner" dependsOnModule="Magento_Backend"/>
+        <add id="Redhatch_Banner::banner" title="Banners" translate="title" module="Redhatch_Banner" parent="Redhatch_Banner::banner_manager" sortOrder="10" action="redhatch_banner/banner/grid" resource="Redhatch_Banner::banner" dependsOnModule="Magento_Backend"/>
+        <add id="Redhatch_Banner::banneritem" title="Banners Items" translate="title" module="Redhatch_Banner" parent="Redhatch_Banner::banner_manager" sortOrder="20" action="redhatch_banner/banneritem/grid" resource="Redhatch_Banner::banneritem" dependsOnModule="Magento_Backend"/>
+    </menu>
+</config>

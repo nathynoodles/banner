@@ -13,7 +13,7 @@ class BannerItem extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 
     protected function _construct()
     {
-        $this->_init('redhatch_banner_item', 'redhatch_banner_item_id');
+        $this->_init('redhatch_banner_item', 'entity_id');
     }
 
 }
